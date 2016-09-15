@@ -3,6 +3,7 @@
 
 using Landis.Library.BiomassCohorts;
 using Landis.SpatialModeling;
+using Landis.Library.Biomass;
 using System.Collections.Generic;
 
 namespace Landis.Extension.BiomassFuels
@@ -27,13 +28,19 @@ namespace Landis.Extension.BiomassFuels
         private static ISiteVar<byte> windSeverity;
         private static ISiteVar<Dictionary<int,int>> numberDeadFirCohorts;
 
-        private static ISiteVar<Landis.Library.BiomassCohorts.ISiteCohorts> cohorts;
+        //private static ISiteVar<Landis.Library.BiomassCohorts.ISiteCohorts> cohorts;
+        private static ISiteVar<ISiteCohorts> cohorts;
 
         //---------------------------------------------------------------------
 
         public static void Initialize()
         {
             cohorts = PlugIn.ModelCore.GetSiteVar<ISiteCohorts>("Succession.BiomassCohorts");
+            if (cohorts == null)
+            {
+                string mesg = string.Format("Cohorts are empty.  Please double-check that this extension is compatible with your chosen succession extension.");
+                throw new System.ApplicationException(mesg);
+            }
 
             fuelType     = PlugIn.ModelCore.Landscape.NewSiteVar<int>();
             decidFuelType   = PlugIn.ModelCore.Landscape.NewSiteVar<int>();
@@ -58,12 +65,6 @@ namespace Landis.Extension.BiomassFuels
             PlugIn.ModelCore.RegisterSiteVar(SiteVars.PercentConifer, "Fuels.PercentConifer");
             PlugIn.ModelCore.RegisterSiteVar(SiteVars.PercentHardwood, "Fuels.PercentHardwood");
             PlugIn.ModelCore.RegisterSiteVar(SiteVars.PercentDeadFir, "Fuels.PercentDeadFir");
-
-            if (cohorts == null)
-            {
-                string mesg = string.Format("Cohorts are empty.  Please double-check that this extension is compatible with your chosen succession extension.");
-                throw new System.ApplicationException(mesg);
-            }
 
         }
         //---------------------------------------------------------------------
@@ -182,7 +183,8 @@ namespace Landis.Extension.BiomassFuels
 
         //---------------------------------------------------------------------
 
-        public static ISiteVar<Landis.Library.BiomassCohorts.ISiteCohorts> Cohorts
+        public static ISiteVar<ISiteCohorts> Cohorts
+        //public static ISiteVar<Landis.Library.BiomassCohorts.ISiteCohorts> Cohorts
         {
             get
             {

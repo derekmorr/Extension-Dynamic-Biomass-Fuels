@@ -4,6 +4,7 @@
 using Landis.Core;
 using Landis.SpatialModeling;
 using Landis.Library.BiomassCohorts;
+using Landis.Library.Biomass;
 
 using System.Collections.Generic;
 using System;
