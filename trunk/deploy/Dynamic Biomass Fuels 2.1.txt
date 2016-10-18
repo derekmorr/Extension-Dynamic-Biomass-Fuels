@@ -2,7 +2,7 @@ LandisData   Extension
 
 Name         "Dynamic Biomass Fuels"
 Version      "2.1"
-Type         disturbance:fuel
+Type         disturbance:fuels
 Assembly     Landis.Extension.BiomassFuels
 Class        Landis.Extension.BiomassFuels.PlugIn
 Description  "Dynamic Fuel assignment extension using Biomass"
