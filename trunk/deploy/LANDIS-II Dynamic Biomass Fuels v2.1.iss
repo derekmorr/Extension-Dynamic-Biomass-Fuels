@@ -7,7 +7,7 @@
 #define CoreVersion      "6.0"
 #define CoreReleaseAbbr  ""
 
-#include "J:\Scheller\LANDIS-II\deploy\package (Setup section) v6.0.iss"
+#include "package (Setup section) v6.0.iss"
 #define ExtDir "C:\Program Files\LANDIS-II\v6\bin\extensions"
 #define AppDir "C:\Program Files\LANDIS-II\v6"
 
@@ -18,7 +18,7 @@ Source: ..\src\lib\Landis.Library.AgeOnlyCohorts.dll; DestDir: {#ExtDir}; Flags:
 Source: ..\src\lib\Landis.Library.Biomass-v1.dll; DestDir: {#ExtDir}; Flags: replacesameversion uninsneveruninstall
 Source: ..\src\lib\Landis.Library.Cohorts.dll; DestDir: {#ExtDir}; Flags: replacesameversion uninsneveruninstall
 
-; Dynamic Fire Fuel System v1.0 plug-in and auxiliary libs (Troschuetz Random)
+; Dynamic Fire Fuel System v1.0 plug-in 
 Source: ..\src\bin\debug\Landis.Extension.BiomassFuels.dll; DestDir: {#ExtDir}; Flags: replacesameversion
 
 Source: docs\LANDIS-II Dynamic Biomass Fuel System v2.1 User Guide.pdf; DestDir: {#AppDir}\docs

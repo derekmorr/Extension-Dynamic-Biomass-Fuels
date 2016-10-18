@@ -72,9 +72,6 @@
 
 #define VersionRelease     Version + ReleaseSuffix
 
-; #define LandisDeployDir    GetEnv("LANDIS_DEPLOY")
-; #define LandisDeployDir    "J:\Scheller\LANDIS-II\deploy"
-; #define LandisDeployDir    "C:\Users\lucash\Documents\LANDIS_Code\Succession_Code\Extensions-Succession\Century-succession\trunk\deploy"
 #define LandisInstallDir   "C:\Program Files\LANDIS-II"
 #define LandisBinDir       LandisInstallDir + "\v6\bin"
 #define LandisPlugInDir    LandisInstallDir + "\plug-ins"
