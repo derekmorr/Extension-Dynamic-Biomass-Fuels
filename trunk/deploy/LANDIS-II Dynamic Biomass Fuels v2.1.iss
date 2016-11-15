@@ -1,6 +1,6 @@
 #define PackageName      "Dynamic Biomass Fuel System"
 #define PackageNameLong  "Dynamic Biomass Fuel System"
-#define Version          "2.1"
+#define Version          "2.1.1"
 #define ReleaseType      "official"
 #define ReleaseNumber    "2"
 
