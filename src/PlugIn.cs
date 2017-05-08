@@ -15,7 +15,7 @@ namespace Landis.Extension.BiomassFuels
         : ExtensionMain
     {
         public static readonly ExtensionType extType = new ExtensionType("disturbance:fuels");
-        public static readonly string PlugInName = "Dynamic Biomass Fuels";
+        public static readonly string ExtensionName = "Dynamic Biomass Fuels";
 
         private string mapNameTemplate;
         private string pctConiferMapNameTemplate;
@@ -32,7 +32,7 @@ namespace Landis.Extension.BiomassFuels
         //---------------------------------------------------------------------
 
         public PlugIn()
-            : base(PlugInName, extType)
+            : base(ExtensionName, extType)
         {
         }
 
@@ -72,6 +72,13 @@ namespace Landis.Extension.BiomassFuels
             hardwoodMax                 = parameters.HardwoodMax;
             deadFirMaxAge               = parameters.DeadFirMaxAge;
 
+
+            MetadataHandler.InitializeMetadata(
+                Timestep,
+                mapNameTemplate,
+                pctConiferMapNameTemplate,
+                pctDeadFirMapNameTemplate);
+
             SiteVars.Initialize();
         }
 
@@ -98,7 +105,7 @@ namespace Landis.Extension.BiomassFuels
             }
 
             string path = MapNames.ReplaceTemplateVars(mapNameTemplate, modelCore.CurrentTime);
-            modelCore.UI.WriteLine("   Writing Fuel map to {0} ...", path);
+            modelCore.UI.WriteLine("   Writing Fuel map to {0}...", path);
             using (IOutputRaster<BytePixel> outputRaster = modelCore.CreateRaster<BytePixel>(path, modelCore.Landscape.Dimensions))
             {
                 BytePixel pixel = outputRaster.BufferPixel;
@@ -110,7 +117,6 @@ namespace Landis.Extension.BiomassFuels
                         pixel.MapCode.Value = 0;
                     
                     outputRaster.WriteBufferPixel();
-
                 }
             }
 
