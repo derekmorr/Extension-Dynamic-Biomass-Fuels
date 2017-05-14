@@ -1,7 +1,5 @@
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\dynamic-biomass-fuels.csprojResolveAssemblyReference.cache
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\Landis.Extension.BiomassFuels.dll
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\Landis.Extension.BiomassFuels.pdb
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\Troschuetz.Random.dll
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\log4net.dll
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\Landis.Extension.BiomassFuels.dll
-C:\Users\avala\Desktop\Landis\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\Landis.Extension.BiomassFuels.pdb
+C:\Users\bmarr\Desktop\working_ExtenBiomassDynamicFuels\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\Landis.Extension.BiomassFuels.dll
+C:\Users\bmarr\Desktop\working_ExtenBiomassDynamicFuels\Extension-Dynamic-Biomass-Fuels\src\bin\Debug\Landis.Extension.BiomassFuels.pdb
+C:\Users\bmarr\Desktop\working_ExtenBiomassDynamicFuels\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\dynamic-biomass-fuels.csprojResolveAssemblyReference.cache
+C:\Users\bmarr\Desktop\working_ExtenBiomassDynamicFuels\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\Landis.Extension.BiomassFuels.dll
+C:\Users\bmarr\Desktop\working_ExtenBiomassDynamicFuels\Extension-Dynamic-Biomass-Fuels\src\obj\Debug\Landis.Extension.BiomassFuels.pdb
