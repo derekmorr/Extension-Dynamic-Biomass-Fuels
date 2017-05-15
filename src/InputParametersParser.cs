@@ -20,7 +20,7 @@ namespace Landis.Extension.BiomassFuels
         {
             get
             {
-                return PlugIn.PlugInName;
+                return PlugIn.ExtensionName;
             }
         }
         //---------------------------------------------------------------------
