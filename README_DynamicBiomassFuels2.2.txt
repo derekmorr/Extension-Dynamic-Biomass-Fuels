@@ -1,31 +1,32 @@
-Title:			README_DynamicBiomassFuels
+Title:			README_DynamicBiomassFuels2.2
 Project:		LANDIS-II Landscape Change Model
 Project Component:	Extension-Dynamic-Biomass-Fuels
 Component Deposition:	https://github.com/LANDIS-II-Foundation/Extension-Dynamic-Biomass-Fuels
 Author:			LANDIS-II Foundation
 Origin Date:		13 May 2017
-Final Date:		13 May 2017
+Final Date:		15 Jun 2017
 
 
 Welcome to the source code repository for Extension-Dynamic-Biomass-Fuels, a LANDIS-II disturbance extension.
 
-Extension-Dynamic-Biomass-Fuels can replace Extension-Dynamic-Fuels in the Dynamic Fire Fuel System. 
-The Dynamic Fire Fuel System couples Extension-Dynamic-Fire with a dynamic fuels extension, currently
-either Extension-Dynamic-Fuels or Extension-Dynamic-Biomass-Fuels. This extension is identical to Extension-Dynamic-Fuels
-except for the calculation of species values (see below). Specifically, this extension uses cohort biomass in addition to
-cohort age, conifer mortality, and post disturbance information at each site to classify every active site into a 
-season-independent fuel type. This extension requires that succession extension that calculates TOTAL biomass for every 
-cohort.  Currently, only Extension-Biomass-Succession calculates total cohort biomass.
+Extension-Dynamic-Biomass-Fuels can replace Extension-Dynamic-Fuel-System in the Dynamic Fire Fuel System. 
+The Dynamic Fire Fuel System couples Extension-Dynamic-Fire-System with a dynamic fuels extension, currently
+either Extension-Dynamic-Fuel-System or Extension-Dynamic-Biomass-Fuels. This extension is identical to 
+Extension-Dynamic-Fuel-System except for the calculation of species values (see below). Specifically, this extension 
+uses cohort biomass in addition to cohort age, conifer mortality, and post disturbance information at each site to 
+classify every active site into a season-independent fuel type. This extension requires that succession extension 
+that calculates TOTAL biomass for every cohort.  Currently, only Extension-Biomass-Succession calculates total 
+cohort biomass.
 
 Extension-Dynamic-Biomass-Fuels will produce maps of fuel types, percent conifer, and percent dead fir, and it produces
 four site variables that can be seen by all other extensions: fuel type, percent conifer, percent hardwood, and percent 
 dead fir. Assigning active sites to fuel types is a required input for Extension-Dynamic-Fire, which utilizes fuel type 
 classification in combination with seasonal and other parameters, to determine fire spread rates.
 
-The Dynamic Fuel Fire System requires that a dynamic fuels extension (currently, either Extension-Dynamic-Fuels or 
-Extension-Dynamic-Biomass-Fuels) be in close synchrony with a dynamic fire extension (currently, Extension-Dynamic-Fire).
-For this reason this extension should be listed IMMEDIATELY BEFORE "Extension-Dynamic-Fire" in the Disturbance Extension
-section of the LANDIS-II scenario setup file (see the scenario_*.txt file in the \examples directory). 
+The Dynamic Fuel Fire System requires that a dynamic fuels extension (currently, either Extension-Dynamic-Fuel-System or 
+Extension-Dynamic-Biomass-Fuels) be in close synchrony with a dynamic fire extension (currently, Extension-Dynamic-Fire-System).
+For this reason this extension should be listed IMMEDIATELY BEFORE "Extension-Dynamic-Fire-System" in the Disturbance 
+Extension section of the LANDIS-II scenario setup file (see the scenario_*.txt file in the \examples directory). 
 
 
 
