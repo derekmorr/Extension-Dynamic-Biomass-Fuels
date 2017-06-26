@@ -30,13 +30,12 @@ Source: ..\..\src\bin\debug\Landis.Library.Biomass-v1.dll; DestDir: {#ExtDir}; F
 Source: ..\..\src\bin\debug\Landis.Library.Cohorts.dll; DestDir: {#ExtDir}; Flags: replacesameversion uninsneveruninstall
 
 
-; User Guides are no longer shipped with installer
 
 ; Complete example for testing the extension
-Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels
-Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels
-Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels
-Source: ..\examples\*.csv; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels
+Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels; Flags: replacesameversion
+Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels; Flags: replacesameversion
+Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels; Flags: replacesameversion
+Source: ..\examples\*.csv; DestDir: {#AppDir}\examples\Dynamic Biomass Fuels; Flags: replacesameversion
 
 
 ; LANDIS-II identifies the extension with the info in this .txt file
