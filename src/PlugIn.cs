@@ -1,4 +1,3 @@
-//  Copyright 2006-2010 Portland State University, USFS Northern Research Station, University of Wisconsin-Madison
 //  Authors:  Robert Scheller, Brian Miranda, Jimm Domingo
 
 using Landis.Core;
@@ -450,8 +449,6 @@ namespace Landis.Extension.BiomassFuels
             for(int i = minimumStartTime; i <= modelCore.CurrentTime; i++)
             {
                 if(modelCore.CurrentTime - i <= deadFirMaxAge)
-                    //if(SiteVars.NumberDeadFirCohorts[site][i] > 0)  // Only if a map actually exists
-                    //    numDeadFir += SiteVars.NumberDeadFirCohorts[site][i];
                     if(SiteVars.NumberDeadFirCohorts[site].ContainsKey(i))
                         numDeadFir += SiteVars.NumberDeadFirCohorts[site][i];
             }
@@ -461,7 +458,7 @@ namespace Landis.Extension.BiomassFuels
 
             ISpeciesDataset SpeciesDataset = modelCore.Species;
 
-            foreach (ISpeciesCohorts speciesCohorts in SiteVars.Cohorts[site])
+            foreach (ISpeciesCohorts speciesCohorts in (Landis.Library.BiomassCohorts.ISpeciesCohorts) SiteVars.Cohorts[site])
                 foreach (ICohort cohort in speciesCohorts)
                     numSiteCohorts++;
 
